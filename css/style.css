@@ -1,0 +1,6 @@
+label{
+    margin-top: 15px;
+} 
+.table td, .table th {
+    vertical-align: middle;
+}

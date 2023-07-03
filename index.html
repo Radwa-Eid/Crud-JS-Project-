@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+
+                <h1 class="mb-4">Product</h1>
+
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control" name="" id="productName">
+                <div class="row">
+                    <div class="col">
+                        <label for="productPrice">Product Price</label>
+                        <input type="number" class="form-control" name="" id="productPrice">
+                    </div>
+                    <div class="col">
+                        <label for="productCount">Product Count</label>
+                        <input type="number" class="form-control" name="" id="productCount">
+                    </div>
+                    <!-- <div class="col">
+                        <label for="productTakes">Product Takes</label>
+                        <input disabled type="text" class="form-control" name="" id="productTakes">
+                    </div> -->
+                    <div class="col input-group mt-5">
+                        <input disabled type="text" class="form-control" name="productTakes" id="productTakes">
+                        <div class="input-group-append">
+                            <button onclick="tackesfun()" class="btn btn-outline-secondary" type="button">Product Takes</button>
+                        </div>
+                    </div>
+                    <div class="col input-group mt-5">
+                        <input disabled type="text" class="form-control" name="TotalPrice" id="TotalPrice">
+                        <div class="input-group-append">
+                            <button onclick="totalatadd()" class="btn btn-outline-secondary" type="button">Total
+                                Price</button>
+                        </div>
+                    </div>
+                </div>
+
+                <label for="productCategory">Product Category</label>
+                <input type="text" class="form-control" name="" id="productCategory">
+
+                <label for="productDescription">Product Description</label>
+                <input type="text" class="form-control" name="" id="productDescription">
+
+                <div>
+                    <button onclick="addProduct()" id="update" type="button" class="mt-5 mr-3  btn btn-info">Add
+                        Product</button>
+                    <button onclick="deleteAll()" type="button" class="mt-5 btn btn-danger">Delete All</button>    
+                </div>
+                
+                <label for="search">Search Product</label>
+                <input onkeyup="searchProduct(this.value)" type="text" class="form-control" id="search">
+                
+                <div class="showData mt-5">
+                    <table class="table table-bordered text-center">
+                        <thead class="bg-dark text-white">
+                            <th scope=" col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Taxes</th>
+                            <th scope="col">Count</th>
+                            <th scope="col">Total Price</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Delete</th>
+                        </thead>
+
+                        <tbody id="tBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
